@@ -74,9 +74,7 @@ class Object{
             timerObject?.invalidate()
             dinosaur?.timerDinosaur.invalidate()
             dinosaur?.dinosaurDead()
-            self.gameOverLabel?.isHidden = false
-            self.buttonPlayAgain?.isHidden = false
-            self.buttonHome?.isHidden = false
+            popUpPlayAgain()
         }
     }
     
@@ -107,6 +105,12 @@ class Object{
     
     func updateScoreLabel(){
         self.scoreLabel?.text = String(format: "%.0f", score)
+    }
+    
+    func popUpPlayAgain(){
+        self.gameOverLabel?.isHidden = false
+        self.buttonPlayAgain?.isHidden = false
+        self.buttonHome?.isHidden = false
     }
     
 }
